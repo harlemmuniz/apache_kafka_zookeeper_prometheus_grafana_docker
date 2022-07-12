@@ -51,4 +51,4 @@ services:
       EXTRA_ARGS: "-javaagent:/usr/share/jmx_exporter/jmx_prometheus_javaagent-0.15.0.jar=8080:/usr/share/jmx_exporter/kafka-2_0_0.yml"
       KAFKA_HEAP_OPTS: "-XX:MaxRAMPercentage=70.0"
     volumes:
-    - ./prometheus:/usr/share/jmx_exporter
+    - ./jmx-exporter:/usr/share/jmx_exporter
