@@ -11,4 +11,4 @@ docker run --name=prometheus --restart unless-stopped -v ./jmx-exporter:/etc/pro
 docker run --name=grafana --restart unless-stopped -e GF_AUTH_ANONYMOUS_ENABLED=true -e GF_AUTH_ANONYMOUS_ORG_ROLE=Admin -v grafana-storage:/var/lib/grafana grafana/grafana
 ```
 
-Add a Data source and the dashboard in Grafana UI
+Add a Prometheus Data Source and a Dashboard in Grafana UI
