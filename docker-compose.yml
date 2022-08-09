@@ -28,6 +28,7 @@ services:
     image: confluentinc/cp-kafka:latest
     hostname: broker
     container_name: broker
+    restart: unless-stopped
     depends_on:
       - zookeeper
     ports:
