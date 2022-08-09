@@ -105,7 +105,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "kafka_controller_kafkacontroller_activecontrollercount{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"} > 0",
+          "expr": "kafka_controller_kafkacontroller_activecontrollercount{job=\"kafka\",instance=~\"$instance\"} > 0",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -188,7 +188,7 @@
       "repeatDirection": "h",
       "targets": [
         {
-          "expr": "count(kafka_server_replicamanager_leadercount{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "count(kafka_server_replicamanager_leadercount{job=\"kafka\",instance=~\"$instance\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -269,7 +269,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(kafka_server_replicamanager_partitioncount{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_server_replicamanager_partitioncount{job=\"kafka\",instance=~\"$instance\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -349,7 +349,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(kafka_controller_kafkacontroller_preferredreplicaimbalancecount{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_controller_kafkacontroller_preferredreplicaimbalancecount{job=\"kafka\",instance=~\"$instance\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -440,7 +440,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(rate(kafka_server_brokertopicmetrics_bytesinpersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",topic!=\"\"}[5m]))",
+          "expr": "sum(rate(kafka_server_brokertopicmetrics_bytesinpersec{job=\"kafka\",instance=~\"$instance\",topic!=\"\"}[5m]))",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -450,7 +450,7 @@
           "step": 4
         },
         {
-          "expr": "sum(rate(kafka_server_brokertopicmetrics_bytesoutpersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",topic!=\"\"}[5m]))",
+          "expr": "sum(rate(kafka_server_brokertopicmetrics_bytesoutpersec{job=\"kafka\",instance=~\"$instance\",topic!=\"\"}[5m]))",
           "format": "time_series",
           "hide": false,
           "interval": "",
@@ -535,7 +535,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(kafka_server_replicamanager_underreplicatedpartitions{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_server_replicamanager_underreplicatedpartitions{job=\"kafka\",instance=~\"$instance\"})",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -617,7 +617,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(kafka_cluster_partition_underminisr{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_cluster_partition_underminisr{job=\"kafka\",instance=~\"$instance\"})",
           "format": "time_series",
           "hide": false,
           "instant": true,
@@ -699,7 +699,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(kafka_controller_kafkacontroller_offlinepartitionscount{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_controller_kafkacontroller_offlinepartitionscount{job=\"kafka\",instance=~\"$instance\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -779,7 +779,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(kafka_controller_controllerstats_uncleanleaderelectionspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum(kafka_controller_controllerstats_uncleanleaderelectionspersec{job=\"kafka\",instance=~\"$instance\"})",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -863,7 +863,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}[5m]))",
+          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka\",instance=~\"$instance\"}[5m]))",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -932,7 +932,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",request=\"Produce\"}[5m]))",
+          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka\",instance=~\"$instance\",request=\"Produce\"}[5m]))",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -1001,7 +1001,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",request=\"FetchConsumer\"}[5m]))",
+          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka\",instance=~\"$instance\",request=\"FetchConsumer\"}[5m]))",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -1155,7 +1155,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",request=\"Fetch\"}[5m]))",
+          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka\",instance=~\"$instance\",request=\"Fetch\"}[5m]))",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -1224,7 +1224,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",request=\"OffsetCommit\"}[5m]))",
+          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka\",instance=~\"$instance\",request=\"OffsetCommit\"}[5m]))",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -1293,7 +1293,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",request=\"Metadata\"}[5m]))",
+          "expr": "sum(rate(kafka_network_requestmetrics_requestspersec{job=\"kafka\",instance=~\"$instance\",request=\"Metadata\"}[5m]))",
           "interval": "",
           "legendFormat": "",
           "refId": "A"
@@ -1413,7 +1413,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "irate(process_cpu_seconds_total{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}[5m])*100",
+          "expr": "irate(process_cpu_seconds_total{job=\"kafka\",instance=~\"$instance\"}[5m])*100",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 2,
@@ -1523,7 +1523,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum without(area)(jvm_memory_bytes_used{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+          "expr": "sum without(area)(jvm_memory_bytes_used{job=\"kafka\",instance=~\"$instance\"})",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "{{instance}}",
@@ -1532,7 +1532,7 @@
           "step": 4
         },
         {
-          "expr": "jvm_memory_bytes_max{job=\"kafka-broker\",area=\"heap\",env=\"$env\",instance=~\"$instance\"}",
+          "expr": "jvm_memory_bytes_max{job=\"kafka\",area=\"heap\",instance=~\"$instance\"}",
           "interval": "",
           "legendFormat": "{{instance}}",
           "refId": "B"
@@ -1638,7 +1638,7 @@
       "pluginVersion": "8.1.3",
       "targets": [
         {
-          "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}[5m]))",
+          "expr": "sum without(gc)(rate(jvm_gc_collection_seconds_sum{job=\"kafka\",instance=~\"$instance\"}[5m]))",
           "interval": "",
           "intervalFactor": 2,
           "legendFormat": "{{instance}}",
@@ -1740,7 +1740,7 @@
           "targets": [
             {
               "exemplar": true,
-              "expr": "sum without(instance,topic)(rate(kafka_server_brokertopicmetrics_messagesinpersec{job=\"kafka-broker\",env=\"$env\",topic!=\"\"}[5m]))",
+              "expr": "sum without(instance,topic)(rate(kafka_server_brokertopicmetrics_messagesinpersec{job=\"kafka\",topic!=\"\"}[5m]))",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "bytes/sec",
@@ -1835,7 +1835,7 @@
           "targets": [
             {
               "exemplar": true,
-              "expr": "sum without(instance,topic)(rate(kafka_server_brokertopicmetrics_bytesinpersec{job=\"kafka-broker\",env=\"$env\",topic!=\"\"}[5m]))",
+              "expr": "sum without(instance,topic)(rate(kafka_server_brokertopicmetrics_bytesinpersec{job=\"kafka\",topic!=\"\"}[5m]))",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -1931,7 +1931,7 @@
           "targets": [
             {
               "exemplar": true,
-              "expr": "sum without(instance,topic)(rate(kafka_server_brokertopicmetrics_bytesoutpersec{job=\"kafka-broker\",env=\"$env\",topic!=\"\"}[5m]))",
+              "expr": "sum without(instance,topic)(rate(kafka_server_brokertopicmetrics_bytesoutpersec{job=\"kafka\",topic!=\"\"}[5m]))",
               "interval": "",
               "intervalFactor": 2,
               "legendFormat": "bytes/sec",
@@ -2024,7 +2024,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum without(topic)(rate(kafka_server_brokertopicmetrics_messagesinpersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",topic!=\"\"}[5m]))",
+              "expr": "sum without(topic)(rate(kafka_server_brokertopicmetrics_messagesinpersec{job=\"kafka\",instance=~\"$instance\",topic!=\"\"}[5m]))",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2118,7 +2118,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum without(topic)(rate(kafka_server_brokertopicmetrics_bytesinpersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",topic!=\"\"}[5m]))",
+              "expr": "sum without(topic)(rate(kafka_server_brokertopicmetrics_bytesinpersec{job=\"kafka\",instance=~\"$instance\",topic!=\"\"}[5m]))",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 2,
@@ -2213,7 +2213,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum without(topic)(rate(kafka_server_brokertopicmetrics_bytesoutpersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",topic!=\"\"}[5m]))",
+              "expr": "sum without(topic)(rate(kafka_server_brokertopicmetrics_bytesoutpersec{job=\"kafka\",instance=~\"$instance\",topic!=\"\"}[5m]))",
               "format": "time_series",
               "interval": "",
               "intervalFactor": 1,
@@ -2320,7 +2320,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "1-kafka_network_socketserver_networkprocessoravgidlepercent{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}",
+              "expr": "1-kafka_network_socketserver_networkprocessoravgidlepercent{job=\"kafka\",instance=~\"$instance\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
               "refId": "A"
@@ -2411,7 +2411,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "1 - kafka_server_kafkarequesthandlerpool_requesthandleravgidlepercent_total{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}",
+              "expr": "1 - kafka_server_kafkarequesthandlerpool_requesthandleravgidlepercent_total{job=\"kafka\",instance=~\"$instance\"}",
               "interval": "",
               "legendFormat": "{{instance}}",
               "refId": "A"
@@ -2516,7 +2516,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_server_zookeeperclientmetrics_zookeeperrequestlatencyms{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\"}",
+              "expr": "kafka_server_zookeeperclientmetrics_zookeeperrequestlatencyms{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -2607,7 +2607,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_server_sessionexpirelistener_zookeepersyncconnectspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}",
+              "expr": "kafka_server_sessionexpirelistener_zookeepersyncconnectspersec{job=\"kafka\",instance=~\"$instance\"}",
               "hide": false,
               "instant": false,
               "interval": "",
@@ -2700,7 +2700,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_server_sessionexpirelistener_zookeeperexpirespersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}",
+              "expr": "kafka_server_sessionexpirelistener_zookeeperexpirespersec{job=\"kafka\",instance=~\"$instance\"}",
               "hide": false,
               "interval": "",
               "legendFormat": "{{instance}}",
@@ -2792,7 +2792,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_server_sessionexpirelistener_zookeeperdisconnectspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}",
+              "expr": "kafka_server_sessionexpirelistener_zookeeperdisconnectspersec{job=\"kafka\",instance=~\"$instance\"}",
               "hide": false,
               "interval": "",
               "legendFormat": "{{instance}}",
@@ -2884,7 +2884,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_server_sessionexpirelistener_zookeeperauthfailurespersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}",
+              "expr": "kafka_server_sessionexpirelistener_zookeeperauthfailurespersec{job=\"kafka\",instance=~\"$instance\"}",
               "hide": false,
               "interval": "",
               "legendFormat": "{{instance}}",
@@ -2991,7 +2991,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "rate(kafka_server_replicamanager_isrshrinkspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}[5m])",
+              "expr": "rate(kafka_server_replicamanager_isrshrinkspersec{job=\"kafka\",instance=~\"$instance\"}[5m])",
               "interval": "",
               "legendFormat": "{{instance}}",
               "refId": "A"
@@ -3082,7 +3082,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "rate(kafka_server_replicamanager_isrexpandspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}[5m])",
+              "expr": "rate(kafka_server_replicamanager_isrexpandspersec{job=\"kafka\",instance=~\"$instance\"}[5m])",
               "hide": false,
               "interval": "",
               "legendFormat": "{{instance}}",
@@ -3187,7 +3187,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_log_log_size{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}) by (topic)",
+              "expr": "sum(kafka_log_log_size{job=\"kafka\",instance=~\"$instance\"}) by (topic)",
               "legendFormat": "{{topic}}",
               "refId": "A"
             }
@@ -3275,7 +3275,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_log_log_size{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"}) by (instance)",
+              "expr": "sum(kafka_log_log_size{job=\"kafka\",instance=~\"$instance\"}) by (instance)",
               "legendFormat": "{{instance}}",
               "refId": "A"
             }
@@ -3379,7 +3379,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_requestqueuetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
+              "expr": "kafka_network_requestmetrics_requestqueuetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -3469,7 +3469,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_localtimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
+              "expr": "kafka_network_requestmetrics_localtimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -3559,7 +3559,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_remotetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
+              "expr": "kafka_network_requestmetrics_remotetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -3649,7 +3649,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_responsequeuetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
+              "expr": "kafka_network_requestmetrics_responsequeuetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -3740,7 +3740,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_responsesendtimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
+              "expr": "kafka_network_requestmetrics_responsesendtimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Produce\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -3846,7 +3846,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_requestqueuetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
+              "expr": "kafka_network_requestmetrics_requestqueuetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -3936,7 +3936,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_localtimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
+              "expr": "kafka_network_requestmetrics_localtimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4026,7 +4026,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_remotetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
+              "expr": "kafka_network_requestmetrics_remotetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4117,7 +4117,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_responsequeuetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
+              "expr": "kafka_network_requestmetrics_responsequeuetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4208,7 +4208,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_responsesendtimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
+              "expr": "kafka_network_requestmetrics_responsesendtimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"Fetch\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4314,7 +4314,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_requestqueuetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
+              "expr": "kafka_network_requestmetrics_requestqueuetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4405,7 +4405,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_localtimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
+              "expr": "kafka_network_requestmetrics_localtimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4495,7 +4495,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_remotetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
+              "expr": "kafka_network_requestmetrics_remotetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4585,7 +4585,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_responsequeuetimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
+              "expr": "kafka_network_requestmetrics_responsequeuetimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4676,7 +4676,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_requestmetrics_responsesendtimems{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
+              "expr": "kafka_network_requestmetrics_responsesendtimems{job=\"kafka\",instance=~\"$instance\",quantile=~\"$percentile\",request=\"FetchFollower\"}",
               "hide": false,
               "legendFormat": "{{instance}} - {{quantile}}",
               "refId": "A"
@@ -4780,7 +4780,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connection_count{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (listener)",
+              "expr": "sum(kafka_server_socketservermetrics_connection_count{job=\"kafka\", instance=~\"$instance\"}) by (listener)",
               "interval": "",
               "legendFormat": "{{listener}}",
               "refId": "A"
@@ -4869,7 +4869,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connection_count{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (instance)",
+              "expr": "sum(kafka_server_socketservermetrics_connection_count{job=\"kafka\", instance=~\"$instance\"}) by (instance)",
               "interval": "",
               "legendFormat": "{{instance}}",
               "refId": "A"
@@ -4958,7 +4958,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connection_creation_rate{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (listener)",
+              "expr": "sum(kafka_server_socketservermetrics_connection_creation_rate{job=\"kafka\", instance=~\"$instance\"}) by (listener)",
               "interval": "",
               "legendFormat": "{{listener}}",
               "refId": "A"
@@ -5047,7 +5047,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connection_creation_rate{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (instance)",
+              "expr": "sum(kafka_server_socketservermetrics_connection_creation_rate{job=\"kafka\", instance=~\"$instance\"}) by (instance)",
               "interval": "",
               "legendFormat": "{{instance}}",
               "refId": "A"
@@ -5136,7 +5136,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connection_close_rate{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (listener)",
+              "expr": "sum(kafka_server_socketservermetrics_connection_close_rate{job=\"kafka\", instance=~\"$instance\"}) by (listener)",
               "interval": "",
               "legendFormat": "{{listener}}",
               "refId": "A"
@@ -5225,7 +5225,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connection_close_rate{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (instance)",
+              "expr": "sum(kafka_server_socketservermetrics_connection_close_rate{job=\"kafka\", instance=~\"$instance\"}) by (instance)",
               "interval": "",
               "legendFormat": "{{instance}}",
               "refId": "A"
@@ -5316,7 +5316,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_network_acceptor_acceptorblockedpercent{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}",
+              "expr": "kafka_network_acceptor_acceptorblockedpercent{job=\"kafka\", instance=~\"$instance\"}",
               "interval": "",
               "legendFormat": "{{instance}} - {{listener}}",
               "refId": "A"
@@ -5405,7 +5405,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connections{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (client_software_name, client_software_version)",
+              "expr": "sum(kafka_server_socketservermetrics_connections{job=\"kafka\", instance=~\"$instance\"}) by (client_software_name, client_software_version)",
               "interval": "",
               "legendFormat": "{{client_software_name}} {{client_software_version}}",
               "refId": "A"
@@ -5510,7 +5510,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "kafka_coordinator_group_groupmetadatamanager_numgroups{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}",
+              "expr": "kafka_coordinator_group_groupmetadatamanager_numgroups{job=\"kafka\", instance=~\"$instance\"}",
               "instant": false,
               "interval": "",
               "legendFormat": "{{instance}}",
@@ -5601,32 +5601,32 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupsstable{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"})",
+              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupsstable{job=\"kafka\", instance=~\"$instance\"})",
               "instant": false,
               "interval": "",
               "legendFormat": "stable",
               "refId": "A"
             },
             {
-              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupspreparingrebalance{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"})",
+              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupspreparingrebalance{job=\"kafka\", instance=~\"$instance\"})",
               "interval": "",
               "legendFormat": "preparing-rebalance",
               "refId": "B"
             },
             {
-              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupsdead{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"})",
+              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupsdead{job=\"kafka\", instance=~\"$instance\"})",
               "interval": "",
               "legendFormat": "dead",
               "refId": "C"
             },
             {
-              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupscompletingrebalance{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"})",
+              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupscompletingrebalance{job=\"kafka\", instance=~\"$instance\"})",
               "interval": "",
               "legendFormat": "completing-rebalance",
               "refId": "D"
             },
             {
-              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupsempty{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"})",
+              "expr": "sum(kafka_coordinator_group_groupmetadatamanager_numgroupsempty{job=\"kafka\", instance=~\"$instance\"})",
               "interval": "",
               "legendFormat": "empty",
               "refId": "E"
@@ -5732,7 +5732,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_brokertopicmetrics_producemessageconversionspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+              "expr": "sum(kafka_server_brokertopicmetrics_producemessageconversionspersec{job=\"kafka\",instance=~\"$instance\"})",
               "hide": false,
               "interval": "",
               "legendFormat": "{{topic}}",
@@ -5824,7 +5824,7 @@
           "pluginVersion": "8.1.3",
           "targets": [
             {
-              "expr": "sum(kafka_server_brokertopicmetrics_fetchmessageconversionspersec{job=\"kafka-broker\",env=\"$env\",instance=~\"$instance\"})",
+              "expr": "sum(kafka_server_brokertopicmetrics_fetchmessageconversionspersec{job=\"kafka\",instance=~\"$instance\"})",
               "hide": false,
               "interval": "",
               "legendFormat": "{{topic}}",
@@ -5890,7 +5890,7 @@
           },
           "targets": [
             {
-              "expr": "sum(kafka_server_socketservermetrics_connections{job=\"kafka-broker\", env=\"$env\", instance=~\"$instance\"}) by (client_software_name, client_software_version) ",
+              "expr": "sum(kafka_server_socketservermetrics_connections{job=\"kafka\", instance=~\"$instance\"}) by (client_software_name, client_software_version) ",
               "interval": "",
               "legendFormat": "{{client_software_name}} - {{client_software_version}}",
               "refId": "A"
@@ -5954,7 +5954,7 @@
           ]
         },
         "datasource": "Prometheus",
-        "definition": "label_values(kafka_server_kafkaserver_brokerstate{env=\"${env}\"}, instance)",
+        "definition": "label_values(kafka_server_kafkaserver_brokerstate, instance)",
         "description": null,
         "error": null,
         "hide": 0,
@@ -5964,7 +5964,7 @@
         "name": "instance",
         "options": [],
         "query": {
-          "query": "label_values(kafka_server_kafkaserver_brokerstate{env=\"${env}\"}, instance)",
+          "query": "label_values(kafka_server_kafkaserver_brokerstate, instance)",
           "refId": "Prometheus-instance-Variable-Query"
         },
         "refresh": 1,
